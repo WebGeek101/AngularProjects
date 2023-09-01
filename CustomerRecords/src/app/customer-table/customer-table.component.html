@@ -1,0 +1,32 @@
+<p>customer-table works!</p>
+<!-- customerTable.html -->
+<div class="container">
+  <div class="row">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Company Name</th>
+          <th>Company Desc</th>
+          <th>Company Start Year</th>
+          <th>ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Age</th>
+          <th>View Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let customer of data">
+            <td>{{ customer.companyName }}</td>
+            <td>{{ customer.companyDesc }}</td>
+            <td>{{ customer.companyStartYear }}</td>
+            <td>{{ customer.id }}</td>
+            <td>{{ customer.firstName }}</td>
+            <td>{{ customer.lastName }}</td>
+            <td>{{ customer.age }}</td>
+            <td><button  class="btn btn-primary" [routerLink]="['/customerDetails/',customer.id]" >View Details</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

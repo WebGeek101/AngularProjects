@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Company Company</th>
+          <th>Company Desc</th>
+          <th>Company Start Year</th>
+          <th>company GSTIN</th>
+          <th>Branches</th>
+          <th>City</th>
+          <th>Country</th>
+          <th>State</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let customer of filteredData">
+            <td>{{ customer.companyName }}</td>
+            <td>{{ customer.companyDesc }}</td>
+            <td>{{ customer.companyStartYear }}</td>
+            <td>{{ customer.companyGSTIN }}</td>
+            <td>{{ customer.branches }}</td>
+            <td>{{ customer.city }}</td>
+            <td>{{ customer.country }}</td>
+            <td>{{ customer.state }}</td>            
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

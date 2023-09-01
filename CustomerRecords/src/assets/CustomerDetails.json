@@ -1,0 +1,31 @@
+[
+    {
+      "id": "1",
+      "companyName": "Acme Corporation",
+      "companyDesc": "A leading manufacturer of widgets",
+      "companyStartYear": 1995,
+      "firstName": "John",
+      "lastName": "Doe",
+      "age": 30,
+      "companyGSTIN": "123456789012345",
+      "branches": 10,
+      "city": "Bangalore",
+      "country": "India",
+      "state": "Karnataka"
+    },
+    {
+      "id": "2",
+      "companyName": "XYZ Company",
+      "companyDesc": "A small startup",
+      "companyStartYear": 2022,
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "age": 25,
+      "companyGSTIN": "987654321098765",
+      "branches": 5,
+      "city": "Chennai",
+      "country": "India",
+      "state": "Tamil Nadu"
+    }
+  ]
+  
