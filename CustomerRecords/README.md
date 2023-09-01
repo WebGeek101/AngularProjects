@@ -29,3 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 =======
 # AngularProjects
 >>>>>>> 578289a0fc6762ef486b728a8dea1a7c7b854be6
+>>>>
