@@ -1,0 +1,38 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Search Employee Details By City</h2>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="searchCity"
+          placeholder="Search city"
+        />
+        <button class="btn btn-primary" (click)="searchEmployees()">Search</button>
+      </div>
+      <div
+        class="alert alert-warning text-center"
+        role="alert"
+        *ngIf="!flag"
+      >
+        No data
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="flag">
+    <div class="row justify-content-center">
+      <div *ngFor="let employee of searchedEmployees" class="col-md-4 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title">{{ employee.name }}</h3>
+            <p class="card-text">{{ employee.city }}</p>
+            <p class="card-text">{{ employee.email }}</p>
+            <p class="card-text">{{ employee.phone }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

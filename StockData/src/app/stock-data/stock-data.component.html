@@ -1,0 +1,63 @@
+<br />
+<div class="container">
+  <h1>Stock Data</h1>
+  <div class="form-group">
+    <form #stockForm="ngForm" (ngSubmit)="getStockData(stockForm)">
+      <label for="date-input">Select a date:</label>
+      <input
+        type="text"
+        placeholder="dd-mmmm-yyyy"
+        class="form-control"
+        id="date-input"
+        name="dateinput"
+        #dateinput="ngModel"
+        ngModel
+        required
+        pattern="^\d{1,2}-[a-zA-Z]{3,9}-\d{4}$"
+      />
+      <div
+        *ngIf="dateinput?.invalid && dateinput.touched"
+        [ngStyle]="{ color: 'red' }"
+      >
+        Date is invalid
+      </div>
+      <br />
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="!stockForm.valid"
+      >
+        Search
+      </button>
+    </form>
+  </div>
+  <br />
+  <br />
+
+  <div *ngIf="!flag" [ngStyle]="{ color: 'red' }">
+    Data not found try again with different date
+  </div>
+
+  <div class="container" *ngIf="stockData && flag">
+    <div class="row">
+      <table class="table">
+        <thead>
+          <tr class="table-active">
+            <th scope="col">Open</th>
+            <th scope="col">High</th>
+            <th scope="col">Low</th>
+            <th scope="col">Close</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-responsive">
+            <td>{{ stockData.open }}</td>
+            <td>{{ stockData.high }}</td>
+            <td>{{ stockData.low }}</td>
+            <td>{{ stockData.close }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

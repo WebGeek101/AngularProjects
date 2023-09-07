@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="card m-3">
+    <div class="card-header">
+      <h1 class="card-title text-center">My Todo List</h1>
+    </div>
+    <div class="card-body">
+      <button class="btn btn-primary mb-3" (click)="toggleFilter()">
+        {{ showAll ? "Show Completed" : "Show All" }}
+      </button>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Completed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let todo of filteredTodos">
+            <td>{{ todo.id }}</td>
+            <td>{{ todo.title }}</td>
+            <td>{{ todo.completed ? "Yes" : "No" }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
